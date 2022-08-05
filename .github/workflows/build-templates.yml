@@ -18,7 +18,9 @@ jobs:
     steps:
       - name: Zip Templates
         working-directory: .
+        shell: bash
         run: |
+          ls -la
           rm -rf build
           mkdir -p build
           for d in ./templates/* ; do
